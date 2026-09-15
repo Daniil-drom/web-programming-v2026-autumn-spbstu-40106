@@ -20,7 +20,7 @@
 
 /* Область, которую обтекают строки текста */
 .example-text::before {
-  content: "";
+  content: '';
   float: right;
   width: 150px;
   height: 150px;
