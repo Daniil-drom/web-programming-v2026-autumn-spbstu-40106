@@ -17,14 +17,27 @@
 
       <section class="panel" aria-labelledby="create-title">
         <h2 id="create-title">Добавить путешествие</h2>
-        <form id="travel-form" class="travel-form">
+        <form id="travel-form" class="travel-form" data-testid="entity-form">
           <label>
             ID
-            <input id="travel-id" type="number" min="1" step="1" required />
+            <input
+              id="travel-id"
+              type="number"
+              min="1"
+              step="1"
+              required
+              name="id"
+            />
           </label>
           <label>
             Имя путешественника
-            <input id="traveler-name" type="text" maxlength="100" required />
+            <input
+              id="traveler-name"
+              type="text"
+              maxlength="100"
+              required
+              name="travelerName"
+            />
           </label>
           <button type="submit">Добавить путешествие</button>
         </form>
@@ -40,12 +53,16 @@
         <p id="empty-message" class="empty-message">
           Пока здесь пусто. Добавьте первое путешествие через форму выше.
         </p>
-        <div id="travel-list" class="travel-list"></div>
+        <div
+          id="travel-list"
+          class="travel-list"
+          data-testid="entity-list"
+        ></div>
       </section>
     </main>
 
     <template id="travel-card-template">
-      <article class="travel-card">
+      <article class="travel-card" data-testid="entity-card">
         <header class="card-header">
           <div>
             <p class="travel-id"></p>
@@ -61,7 +78,11 @@
           </label>
           <button type="submit">Добавить страну</button>
         </form>
-        <button class="delete-travel danger" type="button">
+        <button
+          class="delete-travel danger"
+          type="button"
+          data-testid="delete-entity"
+        >
           Удалить путешествие
         </button>
       </article>
